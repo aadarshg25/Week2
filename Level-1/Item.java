@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-class Item {
+class Inventory {
     private String itemCode;
     private String itemName;
     private double price;
 
-    Item(String itemCode, String itemName, double price) {
+    Inventory(String itemCode, String itemName, double price) {
         this.itemCode = itemCode;
         this.itemName = itemName;
         this.price = price;
@@ -23,7 +23,7 @@ class Item {
     }
 }
 
-class Inventory {
+class Item {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -36,7 +36,7 @@ class Inventory {
         System.out.print("Enter Price per Item: ");
         double price = input.nextDouble();
 
-        Item item = new Item(itemCode, itemName, price);
+        Inventory item = new Inventory(itemCode, itemName, price);
 
         item.displayItemDetails();
 
